@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Dxn.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Login Page</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Welcome to Profitmaker</h2>
+        <form id="loginForm">
+            <div class="input-box">
+                <div class="icon-container">
+                    <i class='bx bxs-envelope' style="color: white;"></i>
+                </div>
+                <div class="input-container">
+                    <input class="inputter" type="email" id="email" placeholder="Email Id" required>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="icon-container">
+                    <i class='bx bxs-key' style="color: white;"></i>
+                </div>
+                <div class="input-container">
+                    <input class="inputter" type="password" id="password" placeholder="Password" required>
+                </div>
+            </div>
+            <p>Forgot password?</p><br>
+            <button type="button" class="login-button" id="signInButton">Sign in</button>
+        </form>
+        <p>Don't have an account? Contact : 040-69069880</p>
+    </div>
+    <div class="viewclass" id="viewid">
+        <p><strong>Mail:</strong><span id="displayEmail"></span></p>
+        <p><strong>Password:</strong><span id="displayPassword"></span></p>
+        <button type="button" id="closeButton">OK</button>
+    </div> 
+    <script>
+        const signInButton = document.getElementById('signInButton');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const view = document.getElementById('viewid');
+        const displayEmail = document.getElementById('displayEmail');
+        const displayPassword = document.getElementById('displayPassword');
+        const closeButton = document.getElementById('closeButton');
+
+        signInButton.addEventListener('click', () => {
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            if (email && password) {
+                displayEmail.textContent = email;
+                displayPassword.textContent = password;
+                view.style.display = 'inline-block';
+            } else {
+                alert('Enter mail and password.');
+            }
+        });
+
+            closeButton.addEventListener('click', () => {
+            view.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

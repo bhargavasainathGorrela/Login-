@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(210, 77%, 53%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    margin-top: -10%;
+}
+
+.login-container {
+    background-color: #efd5a2;
+    padding: 20px;
+    /* border-radius: 8px; */
+    width: 350px;
+    box-shadow: 10px 10px 3px rgba(239, 213, 162, 0.7);       
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* .input-container { 
+    border: 1px solid red;
+    
+    border-radius: 5px; 
+    padding: 1px;
+    background-color: #f9f9f9; 
+}*/
+
+.inputter, button{
+    /* box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.5);   */
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid white;
+}
+
+.inputter:hover{
+    border: 2px solid hsl(210, 77%, 53%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-container input {
+    width: 250px;
+	height: 20px;
+    /* border: 1px solid #ddd3cc; */
+    padding: 10px;
+    /* border-radius: 5px; */
+    /* outline: none; */
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(31, 85%, 49%);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.icon-container ion-icon {
+    width: 20px;
+    height: 20px;
+}
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #df9921;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: #ee970a;
+}
+form{
+    text-align: center;
+    padding-top: 30px;
+    margin-top:-5%;
+	
+}
+.viewclass button{
+    border: black;
+    cursor: pointer;
+    background-color: #df9921;
+    left: 50%;
+}
+.viewclass{
+    display: none;
+    position: fixed;
+    padding: 20px;
+    background-color:white;
+    border: 2px solid  #df9921;
+    margin-top: 20px;
+    /* color: white; */
+    border-radius: 10px;
+}
+@media (max-width:1000px) 
+{
+.login-container {
+width: 100%;
+max-width: 100%;
+    }
+}
